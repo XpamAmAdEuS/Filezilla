@@ -51,7 +51,8 @@ class MitFilezilla {
         return $this->fzAdmin;
     }
 
-    protected function parseSettings(SimpleXMLElement $root) {
+    protected function parseSettings($root) {
+
         
         $settings = array();
         foreach($root->Settings->Item as $item) {
@@ -64,7 +65,7 @@ class MitFilezilla {
     }
 
     
-    protected function parseGroups(SimpleXMLElement $root) {
+    protected function parseGroups($root) {
         $groups = array();
         foreach($root->Groups->Group as $group) {
             $fzGroup = FzGroup::fromXml($group);
@@ -75,7 +76,7 @@ class MitFilezilla {
         $this->fzAdmin->setGroups($groups);
     }
 
-    protected function parseUsers(SimpleXMLElement $root) {
+    protected function parseUsers($root) {
         $users = array();
         foreach($root->Users->User as $user ) {
             $fzUser = FzUser::fromXml($user);

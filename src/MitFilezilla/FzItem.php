@@ -6,7 +6,7 @@ class FzItem {
   public $type;
   public $value;
 
-  public static function fromXml(SimpleXMLElement $elt) {
+  public static function fromXml($elt) {
       $item = new FzItem();
       
       $item->name = (string) $elt['name'];

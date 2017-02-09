@@ -38,7 +38,7 @@ class FzGroup {
    * @param SimpleXMLElement $elt
    * @return FzGroup
    */
-  public static function fromXml(SimpleXMLElement $elt) {
+  public static function fromXml( $elt) {
       $group = new FzGroup();
       $group->name = (string) $elt['Name'];
       
@@ -56,7 +56,7 @@ class FzGroup {
    * @param SimpleXMLElement $elt
    * @return array
    */
-  public static function parseOptions(SimpleXMLElement $elt) {
+  public static function parseOptions( $elt) {
       $options = array();
       
       foreach ($elt->Option as $option) {
@@ -67,7 +67,7 @@ class FzGroup {
       return $options;
   }
   
-  public static function parsePermissions(SimpleXMLElement $elt) {
+  public static function parsePermissions( $elt) {
       $permissions = array();
       foreach($elt->Permissions->Permission as $perm) {
           $permDir = (string) $perm['Dir'];

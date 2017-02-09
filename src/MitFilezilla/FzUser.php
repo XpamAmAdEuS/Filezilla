@@ -7,7 +7,7 @@ class FzUser extends FzGroup {
   public $group;
   
 
-  public static function fromXml(SimpleXMLElement $elt) {
+  public static function fromXml( $elt) {
       $user = new self();
       $user->name = (string) $elt['Name'];
       
