@@ -1,0 +1,19 @@
+{
+    "name": "xpamamadeus/filezilla",
+    "description": "FilezillaParser",
+    "keywords": ["FTP"],
+    "type": "library",
+    "license": "GPLv3",
+    "authors": [
+        {
+            "name": "XpamAmAdEuS"
+        }
+    ],
+
+    "autoload": {
+        "psr-4": {
+            "MitFilezilla\\": "src/MitFilezilla"
+        }
+    }
+
+}
